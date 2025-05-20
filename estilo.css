@@ -1,39 +1,132 @@
-.box{
-  width: 1440px;
-  height: 700px;
-  background-color: #F5F3F0;
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-}
-.container{
-  width: 1220px;
-  height: auto;
-  display: flex;
-  padding: 140px;
-  align-items: center;
- 
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.imagem{
-  width: 350px;
-  height: 350px;
-  border-radius: 175px;
-  padding: 100px;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000;
 }
-.texto{
-  line-height: 24px;
+
+/* Estrutura principal */
+.box {
+  max-width: 1440px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #927140;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  margin: 0 auto;
 }
-.texto p{
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Imagem de perfil */
+.imagem img {
+  width: 333px;
+  height: 333px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Texto ao lado da imagem */
+.texto {
+  max-width: 600px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.texto p {
   font-size: 18px;
   color: #9e8c6c;
   text-transform: uppercase;
-  
-
+  margin-bottom: 10px;
+  letter-spacing: 1px;
 }
-.texto h1{
+
+.texto h2 {
   font-size: 126px;
   color: #000000;
-  
- 
+  margin-bottom: 20px;
+  line-height: 112px;
+  letter-spacing: -4px;
+}
+
+/* Botão */
+.texto a {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #9e8c6c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.texto a:hover {
+  background-color: #0699a6;
+}
+
+/* Estrutura secundária */
+.infor {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin: 0 auto;
+  padding: 70px 20px;
+}
+
+
+
+.bloco .content,
+.bloco .content1,
+.bloco .content2 {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 100px;
+}
+
+.destaque {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  color: #9e8c6c;
+  text-transform: uppercase;
+}
+
+.content p,
+.content1 p, 
+.content2 p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34px;
+  letter-spacing: 0px;
+  color: #000;
+}
+
+.negrito {
+font-weight: 700;
+font-size: 20px;
+line-height: 34px;
+letter-spacing: 0px;
 }
