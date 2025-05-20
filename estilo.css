@@ -1,0 +1,39 @@
+.box{
+  width: 1440px;
+  height: 700px;
+  background-color: #F5F3F0;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.container{
+  width: 1220px;
+  height: auto;
+  display: flex;
+  padding: 140px;
+  align-items: center;
+ 
+}
+
+.imagem{
+  width: 350px;
+  height: 350px;
+  border-radius: 175px;
+  padding: 100px;
+}
+.texto{
+  line-height: 24px;
+}
+.texto p{
+  font-size: 18px;
+  color: #9e8c6c;
+  text-transform: uppercase;
+  
+
+}
+.texto h1{
+  font-size: 126px;
+  color: #000000;
+  
+ 
+}
