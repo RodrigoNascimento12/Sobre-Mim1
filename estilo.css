@@ -244,9 +244,9 @@ text-align: center;
 /* RESPONSIVIDADE BÁSICA */
 @media (max-width: 1220px) {
   .container {
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: 100%;
-    text-align: center;
+    
     
   }
   
@@ -267,7 +267,7 @@ text-align: center;
     letter-spacing: -2px;
     
   }
- .section .container{
+ .header .container{
   flex-direction: column-reverse;
  }
 
