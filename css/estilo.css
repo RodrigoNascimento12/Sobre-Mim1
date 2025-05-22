@@ -109,6 +109,10 @@ margin-bottom: 40px;
   margin-bottom: 30px;
 }
 
+.bloco-esquerdo,
+.bloco-direita {
+  padding: 30px;
+}
 
 .bloco-esquerdo {
   max-width: 350px;
@@ -116,7 +120,10 @@ margin-bottom: 40px;
   margin: 40px;
 }
 
+.bloco-direita {
+  max-width: 635px;
 
+}
 
 /* CONTEÚDO DOS BLOCOS */
 .content, .texto-bloco  {
@@ -219,32 +226,12 @@ text-align: center;
 
 /* RESPONSIVIDADE BÁSICA */
 @media (max-width: 768px) {
-  .box, .container {
+  .container {
     flex-direction: column;
     text-align: center;
-    width: 100%;
   }
-  .box{
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-  }
-  .box, .texto h2{
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-  }
-  .box, .texto p{
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-  }
-  .texto a{
-    flex-direction: column;
-    text-align: center;
-    
-  }
-  .box, .texto h2 {
+
+  .texto h2 {
     font-size: 64px;
     line-height: 72px;
     letter-spacing: -2px;
@@ -256,15 +243,14 @@ text-align: center;
   }
 
   .blocos {
-    flex-direction: column-reverse;
-    
+    flex-direction: column;
+    padding: 20px;
   }
- 
+
   .bloco-esquerdo,
   .bloco-direita {
     max-width: 100%;
     height: auto;
-    flex-direction: column-reverse;
   }
 
   .boxrodape {
