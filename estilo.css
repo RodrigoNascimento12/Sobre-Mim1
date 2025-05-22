@@ -77,7 +77,13 @@ body {
  letter-spacing: 0px;
 }
 
-
+.texto1, .titulo h3{
+  font-weight: 900;
+ font-size: 36px;
+ line-height: 46px;
+ color: #000;
+ letter-spacing: 0px;
+}
 .texto0 .titulo {
  font-weight: 900;
  font-size: 36px;
@@ -174,7 +180,7 @@ margin-bottom: 40px;
 
 .destaque,
 .destaque1,
-.destaque2 {
+ {
  font-weight: 700;
  font-size: 18px;
  line-height: 24px;
@@ -191,11 +197,24 @@ margin-bottom: 40px;
 
 .destaque1 {
  color: #9e8c6c;
+font-weight: 700;
+font-size: 18px;
+line-height: 24px;
+letter-spacing: 1px;
+text-transform: uppercase;
+
 }
 
 
 .destaque2 {
  color: #000;
+font-family: PT Sans Narrow;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+letter-spacing: 0px;
+text-align: right;
+
 }
 
 
@@ -245,7 +264,6 @@ text-align: center;
   .container {
     flex-direction: column;
     align-items: center;
-    text-align: center;
     width: 100%;
   }
 
@@ -274,7 +292,7 @@ text-align: center;
   }
 
   .blocos {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 30px;
     padding: 20px;
     align-items: flex-start;
