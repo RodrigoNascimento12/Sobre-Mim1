@@ -69,25 +69,6 @@ body {
   letter-spacing: 0px;
 }
 
-.texto0, .texto1 .titulo {
-  font-weight: 900;
-  font-size: 28px;
-  line-height: 46px;
-  color: #000;
-  letter-spacing: 0px;
-}
-.texto0 p, .texto1 p, .texto2 p, .texto3 p, .texto4 p{
-
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 34px;
-  letter-spacing: 0px;
-  margin-bottom: 40px;
-  margin-top: -8px;
-
-}
-
-
 /* BOTÃO */
 .texto a {
   display: inline-block;
@@ -102,15 +83,58 @@ body {
 .texto a:hover {
   background-color: #0699a6;
 }
-
-/* BLOCOS PRINCIPAIS */
-.blocos {
-  display: flex;
-  justify-content: space-around;
-  gap: 30px;
-  padding: 40px;
-  margin-bottom: 30px;
+/*Fontes dos titulos*/
+h2 {
+font-family: Playfair Display;
+font-weight: 900;
+font-size: 126px;
+line-height: 112px;
+letter-spacing: -2.17px;
+color: #000;
 }
+h2 {
+font-family: Playfair Display;
+font-weight: 900;
+font-size: 36px;
+line-height: 46px;
+letter-spacing: 0px;
+color: #000;
+}
+ h3 {
+font-family: PT Sans Narrow;
+font-weight: 700;
+font-size: 18px;
+line-height: 24px;
+letter-spacing: 1px;
+text-transform: uppercase;
+color: #9E8C6C;
+}
+h4 {
+font-family: PT Sans Narrow;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+letter-spacing: 0px;
+text-align: right;
+color: #9E8C6C;
+}
+p {
+font-family: PT Sans Narrow;
+font-weight: 400;
+font-size: 20px;
+line-height: 34px;
+letter-spacing: 0px;
+color: #000;
+}
+.negrito {
+font-family: PT Sans Narrow;
+font-weight: 700;
+font-size: 20px;
+line-height: 34px;
+letter-spacing: 0px;
+color: #000;
+}
+/*fechamento das fontes*/
 
 .divisor{
  width: 71px;
@@ -118,85 +142,7 @@ body {
  background-color: #0699A6;
  margin: 60px 0;
 }
-  
-
-.bloco-esquerdo {
-  max-width: 350px;
-  height: auto;
-  margin: 40px;
-}
-
-
-
-/* CONTEÚDO DOS BLOCOS */
-.content, .texto-bloco  {
-  width: 100%;
-  max-width: 350px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 30px;
-}
-.content, .content1, .content2, .content3 {
-  
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 34px;
-  letter-spacing: 0px;
-  margin-bottom: 30px;
-  
-}
-
-.content3{
-  color: #0699A6;
-}
-
-.content p {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 34px;
-  color: #000;
  
-}
-
-.content p.negrito {
-  font-weight: 700;
-}
-
-.content p.destaque-color {
-  color: #0699A6;
-  font-weight: 700;
-}
-
-.destaque,
-.destaque1{
-
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.destaque {
-  color: #9e8c6c;
-  letter-spacing: 2px;
-}
-
-.destaque1 {
-  color: #9e8c6c;
-}
-
-.destaque2 {
-  color: #000;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0px;
-  text-align: right;
- 
-}
-
 
 /* RODAPÉ */
 .footer{
@@ -239,87 +185,4 @@ letter-spacing: 0px;
 text-align: center;
 }
 
-/* RESPONSIVIDADE BÁSICA */
-@media (max-width: 1220px) {
-  .container {
-    flex-direction: column;
-    width: 100%;
-    
-    
-  }
-  
-  .texto{
-    max-width: 100%;
-    text-align: center;
-  }
-  
-  .texto p, .texto p .intro{
-   font-size: 18px;
-   line-height: 30px;
-  }
-  
-
-  .texto h2{
-    font-size: 90px;
-    line-height: 85px;
-    letter-spacing: -2px;
-    
-  }
- .header .container{
-  flex-direction: column-reverse;
- }
-
-  .imagem img {
-    width: 260px;
-    height: 260px;
-    display: flex;
-    text-align: center;    
-    
-  }
-
-  .blocos {
-    flex-direction: column;
-    padding: 20px;
-    gap: 30px;
-    align-items: flex-start;
-  }
-
-  .bloco-esquerdo {
-    max-width: 100%;
-    align-self: flex-start;
-    text-align: left;
-    margin: 20px 0;
-    flex-direction: column-reverse;
-    
-  }
-
-.bloco-direito {
-    max-width: 100%;
-    align-self: flex-start;
-    text-align: left;
-    margin: 20px 0;
-    flex-direction: column-reverse;
-    order: 1;
-    
-  }
-
-   .content,
-  .texto-bloco {
-    max-width: 100%;
-  }
-
-  .rodape h2 {
-    font-size: 50px;
-    line-height: 60px;
-  }
-
-  .rodape p {
-    font-size: 28px;
-    line-height: 38px;
-  }
-
-  .footer {
-    height: auto;
-    padding: 40px 0;
-  }
-}
+*
