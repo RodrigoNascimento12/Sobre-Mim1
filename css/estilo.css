@@ -1,307 +1,268 @@
-/* ==============================
-   RESET BÁSICO
-================================= */
+:root {
+  --color-primary: #A60606;
+  --color-secondary: #A66606;
+  --color-azul: #0663A6;
+  --color-accent: #9e8c6c;
+  --color-light: #fff;
+  --color-dark: #000;
+  --color-body: #A5CED2;
+  --color-ponto: #333333;
+}
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ==============================
-   VARIÁVEIS
-================================= */
-:root {
-  --color-primary: #A60606;
-  --color-secondary:  #A66606;
-;
-  --color-accent: #9e8c6c;
-  --color-light: #fff;
-  --color-dark: #000;
-  --color-body: #A5CED2;
-  --color-ponto:  #333333;
-
-
-
-  --font-title: 'Playfair Display', serif;
-  --font-text: 'PT Sans Narrow', sans-serif;
-}
-
-/* ==============================
-   BASE
-================================= */
 body {
-  font-family: var(--font-text);
-  background-color: var(--color-ponto);
-  color: var(--color-dark);
+  background-color: var(--color-body);
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: var(--color-ponto);
 }
 
-/* ==============================
-   CONTAINERS PRINCIPAIS
-================================= */
-.box,
-.container {
-  width: 100%;
-  max-width: 100%;
+/* HEADER */
+header {
+  background-color: var(--color-azul);
+  padding: 40px 0;
+  text-align: center;
+}
+
+header .container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  align-items: center;
+  padding: 40px;
 }
-
-.box {
-  background-color: var(--color-body);
-}
-
-.container {
-  background-color: var(--color-body);
-}
-
-/* ==============================
-   IMAGEM DE PERFIL
-================================= */
-.imagem img {
-  width: 333px;
-  height: 333px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-/* ==============================
-   TEXTO
-================================= */
 .texto {
-  max-width: 600px;
-  text-align: left;
-  line-height: 1.6;
+  padding: 40px;
+}
+header .imagem img {
+  width: 333px;
+  border-radius: 50%;
+  border: 4px solid var(--color-light);
+ 
+}
+
+header .texto p {
+  color: var(--color-light);
+  font-size: 1.2rem;
   padding: 40px;
 }
 
-.texto p.intro {
-  font-size: 18px;
-  color: var(--color-dark);
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-}
-
-.texto h2 {
-  font-family: var(--font-title);
-  font-weight: 900;
-  font-size: 126px;
-  line-height: 112px;
-  letter-spacing: -2.17px;
-  color: var(--color-dark);
-  margin-bottom: 20px;
-}
-
-.texto p,
-li {
-  font-family: var(--font-text);
-  font-size: 15px;
-  line-height: 34px;
+header .texto h2 {
   color: var(--color-light);
+  font-size: 2.5rem;
+  margin: 10px 0;
+
 }
 
-.negrito {
-  font-weight: 700;
-}
-
-.divisor {
-  width: 71px;
-  height: 10px;
-  background-color: var(--color-light);
-  margin-bottom: 40px;
-}
-
-/* ==============================
-   TEXTOS SECUNDÁRIOS
-================================= */
-h3 {
-  font-family: var(--font-title);
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 46px;
-  color: var(--color-secondary);
-}
-
-h4 {
-  font-family: var(--font-text);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 24px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--color-dark);
-}
-
-/* ==============================
-   BOTÃO
-================================= */
-.texto a {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: var(--color-accent);
+header .texto a {
+  background-color: var(--color-primary);
   color: var(--color-light);
+  padding: 10px 20px;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 25px;
+  transition: background-color 0.3s;
 }
 
-.texto a:hover {
+header .texto a:hover {
   background-color: var(--color-secondary);
 }
 
-.texto a:focus {
-  outline: 2px solid var(--color-secondary);
-  outline-offset: 4px;
-}
-
-/* ==============================
-   SEÇÕES INTERNAS
-================================= */
+/* SECTIONS */
 .section {
   display: flex;
   justify-content: center;
-  align-items: stretch; /* Faz os blocos terem mesma altura */
-  gap: 100px;
-  padding-top: 80px;
-  max-width: 100%;
-  margin: 0 auto;
-  flex-wrap: nowrap; /* Garante que não quebrem para baixo */
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap;
 }
 
 .bloco-esquerdo {
-  width: 365px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 50px;
- }
+  flex: 1;
+  min-width: 300px;
+  order: 1;
+}
 
 .bloco-direita {
-  width: 636px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 50px;
+  flex: 1;
+  min-width: 300px;
+  order: 2;
+}
+
+/* BLOCO PADRÃO */
+.bloco,
+.bloco-1,
+.bloco-2,
+.boco-3 {
+  
+  padding: 20px;
+  margin-bottom: 20px;
+ 
+}
+
+.bloco h3,
+.bloco-1 h3,
+.bloco-2 h3,
+.boco-3 h3,
+.texto-0 h3,
+.texto-1 h2,
+.texto-2 h3 {
+  color: var(--color-dark);
+}
+
+ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.negrito {
+  font-weight: bold;
+}
+
+/* TEXTOS */
+.texto-0,
+.texto-1,
+.texto-2 {
+ 
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.divisor {
+  background: var(--color-azul);
+  margin: 20px 20px;
+  width: 71px;
+  height: 10px;
   
 }
 
-
-
-.tempo {
-  justify-content: space-between;
+/* PORTFÓLIO */
+.container-cards {
   display: flex;
-  background: var(--color-primary);
-  color: var(--color-light);
-  line-height: 34px;
+  justify-content: center;
+  gap: 30px;
+  
+  margin-top: 20px;
 }
 
-/* ==============================
-   LISTAS
-================================= */
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.card {
+  background-color: var(--color-light);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-/* ==============================
-  FOOTER
-================================= */
-   
-.footer {
+.card img {
   width: 100%;
-  background-color: var(--color-primary);
-  padding: 40px 0;
+  display: block;
 }
 
-.rodape {
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.botao-portfolio {
+  display: inline-block;
+  margin: 15px;
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+.botao-portfolio:hover {
+  background-color: var(--color-secondary);
+}
+
+
+/* FOOTER */
+.footer {
+  background-color: var(--color-azul);
+  padding: 30px 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
   text-align: center;
-  padding: 50px;
-  background-color: var(--color-ponto);
-  color: var(--color-dark);
+  color: var(--color-light);
 }
 
-.rodape h2 {
-  font-family: var(--font-title);
-  font-weight: 900;
-  font-size: 66px;
-  line-height: 82px;
-  letter-spacing: -1.14px;
-  color: var(--color-dark);
+.footer .rodape h2 {
+  margin-bottom: 10px;
 }
 
-.rodape p {
-  font-family: var(--font-base);
-  color: var(--color-secondary);
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 46px;
+.footer .rodape p {
+  margin: 5px 0;
 }
 
-.lista ul {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  list-style: none;
+.footer .lista a img {
+  width: 30px;
+  margin: 0 10px;
+  transition: transform 0.3s;
 }
 
-/* ==============================
-   RESPONSIVIDADE
-================================= */
+.footer .lista a img:hover {
+  transform: scale(1.2);
+}
+
+/* RESPONSIVO */
 @media (max-width: 1024px) {
   .section {
-    flex-direction: column-reverse;
-    gap: 40px;
-    padding-top: 40px;
-  }
-
-  .container {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .imagem img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .texto {
-    text-align: center;
-    padding: 20px;
-  }
-
-  .texto h2 {
-    font-size: 48px;
-    line-height: 56px;
-    letter-spacing: -1px;
-  }
-
-  .bloco-direita,
-  .bloco-esquerdo {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .rodape h2 {
-    font-size: 40px;
-    line-height: 50px;
-  }
-
-  .rodape p {
-    font-size: 24px;
-    line-height: 34px;
-  }
-
-  .lista ul {
-    flex-wrap: wrap;
     gap: 20px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .bloco-direita {
+    order: -1;
+  }
+
+  .bloco-esquerdo {
+    order: 0;
+  }
+
+  header .texto h2 {
+    font-size: 2rem;
+  }
+
+  header .texto p {
+    font-size: 1rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header .texto h2 {
+    font-size: 1.8rem;
+  }
+
+  header .texto p {
+    font-size: 0.9rem;
+  }
+
+  header .texto a {
+    padding: 8px 16px;
   }
 }
