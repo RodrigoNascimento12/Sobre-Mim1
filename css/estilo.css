@@ -1,50 +1,74 @@
-/* RESET BÁSICO */
+/* ==============================
+   RESET BÁSICO
+================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BASE DO SITE */
-body {
-  font-family: PT Sans Narrow, Playfair Display;
-  background-color: #ffffff;
-  color: #000;
+/* ==============================
+   VARIÁVEIS
+================================= */
+:root {
+  --color-primary: #A60606;
+  --color-secondary:  #A66606;
+;
+  --color-accent: #9e8c6c;
+  --color-light: #fff;
+  --color-dark: #000;
+  --color-body: #A5CED2;
+  --color-ponto:  #333333;
+
+
+
+  --font-title: 'Playfair Display', serif;
+  --font-text: 'PT Sans Narrow', sans-serif;
 }
 
-/* ESTRUTURA PRINCIPAL */
-.box {
+/* ==============================
+   BASE
+================================= */
+body {
+  font-family: var(--font-text);
+  background-color: var(--color-ponto);
+  color: var(--color-dark);
+}
+
+/* ==============================
+   CONTAINERS PRINCIPAIS
+================================= */
+.box,
+.container {
   width: 100%;
-  max-width: 1540px;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
-  margin: 0 auto;
-  background-color: #dad2c4;
 }
 
+.box {
+  background-color: var(--color-body);
+}
 
 .container {
-  width: 100%;
-  max-width: 100%;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  background:linear-gradient(45deg, blue, rgb(160, 157, 157) 33.3%);
- }
+  background-color: var(--color-body);
+}
 
-/* IMAGEM DE PERFIL */
+/* ==============================
+   IMAGEM DE PERFIL
+================================= */
 .imagem img {
   width: 333px;
   height: 333px;
   object-fit: cover;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
 }
 
-/* TEXTO AO LADO DA IMAGEM */
+/* ==============================
+   TEXTO
+================================= */
 .texto {
   max-width: 600px;
   text-align: left;
@@ -54,169 +78,193 @@ body {
 
 .texto p.intro {
   font-size: 18px;
-  color: #9e8c6c;
+  color: var(--color-dark);
   text-transform: uppercase;
   margin-bottom: 10px;
   letter-spacing: 1px;
 }
 
 .texto h2 {
-  color: #000;
+  font-family: var(--font-title);
+  font-weight: 900;
+  font-size: 126px;
+  line-height: 112px;
+  letter-spacing: -2.17px;
+  color: var(--color-dark);
   margin-bottom: 20px;
- font-family: Playfair Display;
- font-weight: 900;
- font-size: 126px;
- line-height: 112px;
- letter-spacing: -2.17px;
-
 }
 
- p {
- font-family: PT Sans Narrow;
- font-weight: 400;
- font-size: 20px;
- line-height: 34px;
- letter-spacing: 0px;
- color: #000;
+.texto p,
+li {
+  font-family: var(--font-text);
+  font-size: 15px;
+  line-height: 34px;
+  color: var(--color-light);
 }
-.negrito{
-font-family: PT Sans Narrow;
-font-weight: 700;
-font-size: 20px;
-line-height: 34px;
-letter-spacing: 0px;
+
+.negrito {
+  font-weight: 700;
 }
-li{
- font-family: PT Sans Narrow;
-font-weight: 400;
-font-size: 20px;
-line-height: 34px;
-letter-spacing: 0px;
-}
-.divisor{
+
+.divisor {
   width: 71px;
   height: 10px;
-  background-color: #0699A6;
+  background-color: var(--color-light);
   margin-bottom: 40px;
 }
-.tempo {
-  display: flex;
-  max-width: 100%;
-  justify-content: space-between;
-}
-h4 {
-  font-family: PT Sans Narrow;
-font-weight: 700;
-font-size: 14px;
-line-height: 24px;
-letter-spacing: 2px;
-text-transform: uppercase;
-color: #9e8c6c;
-}
-h3{
- font-family: Playfair Display;
-font-weight: 900;
-font-size: 36px;
-line-height: 46px;
-letter-spacing: 0px;
 
+/* ==============================
+   TEXTOS SECUNDÁRIOS
+================================= */
+h3 {
+  font-family: var(--font-title);
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 46px;
+  color: var(--color-secondary);
 }
-/* BOTÃO */
+
+h4 {
+  font-family: var(--font-text);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-dark);
+}
+
+/* ==============================
+   BOTÃO
+================================= */
 .texto a {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #9e8c6c;
-  color: #fff;
+  background-color: var(--color-accent);
+  color: var(--color-light);
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .texto a:hover {
-  background-color: #0699a6;
+  background-color: var(--color-secondary);
 }
 
-.blocos {
+.texto a:focus {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 4px;
+}
+
+/* ==============================
+   SEÇÕES INTERNAS
+================================= */
+.section {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch; /* Faz os blocos terem mesma altura */
   gap: 100px;
   padding-top: 80px;
-  max-width: 1024px;
+  max-width: 100%;
   margin: 0 auto;
-}
-
-.bloco-esquerdo,
-.bloco-direita {
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px; /* espaçamento interno entre os elementos */
+  flex-wrap: nowrap; /* Garante que não quebrem para baixo */
 }
 
 .bloco-esquerdo {
-  width: 350px;
-  height: auto;
-}
+  width: 365px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px;
+ }
 
 .bloco-direita {
-  width: 635px;
-  height: auto;
+  width: 636px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px;
+  
 }
 
-/* Remover pontos das listas */
+
+
+.tempo {
+  justify-content: space-between;
+  display: flex;
+  background: var(--color-primary);
+  color: var(--color-light);
+  line-height: 34px;
+}
+
+/* ==============================
+   LISTAS
+================================= */
 ul {
   list-style: none;
-  padding-left: 0;
-  margin-left: 0;
+  padding: 0;
+  margin: 0;
 }
 
+/* ==============================
+  FOOTER
+================================= */
+   
 .footer {
-  max-width: 100%;
-  background:linear-gradient(45deg, blue, rgb(160, 157, 157) 33.3%);
-  margin-bottom: 0 auto;
-  padding: 40px;
+  width: 100%;
+  background-color: var(--color-primary);
+  padding: 40px 0;
 }
 
 .rodape {
   display: flex;
-  text-align: center;
-  justify-content: center;
-  padding: 50px;
- margin: 0 auto;
-flex-direction: column;
-color: #080808;
-}
-.lista ul {
-  width: 100%;
-  display: flex;
-  text-align: center;
+  flex-direction: column;
   align-items: center;
-   justify-content: center;
-  gap:10px;
-}
-.rodape h2{
-font-weight: 900;
-font-size: 66px;
-line-height: 82px;
-letter-spacing: -1.14px;
-text-align: center;
-}
-.rodape p{
-color: #0699A6;
-font-weight: 900;
-font-size: 36px;
-line-height: 46px;
-letter-spacing: 0px;
-text-align: center;
+  text-align: center;
+  padding: 50px;
+  background-color: var(--color-ponto);
+  color: var(--color-dark);
 }
 
-/* RESPONSIVIDADE BÁSICA */
-@media (max-width: 1023px) {
+.rodape h2 {
+  font-family: var(--font-title);
+  font-weight: 900;
+  font-size: 66px;
+  line-height: 82px;
+  letter-spacing: -1.14px;
+  color: var(--color-dark);
+}
+
+.rodape p {
+  font-family: var(--font-base);
+  color: var(--color-secondary);
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 46px;
+}
+
+.lista ul {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+================================= */
+@media (max-width: 1024px) {
+  .section {
+    flex-direction: column-reverse;
+    gap: 40px;
+    padding-top: 40px;
+  }
+
   .container {
     flex-direction: column;
-    align-items: center;
     gap: 40px;
   }
 
@@ -226,9 +274,8 @@ text-align: center;
   }
 
   .texto {
-    text-align: left;
-    padding: 0 20px;
     text-align: center;
+    padding: 20px;
   }
 
   .texto h2 {
@@ -237,32 +284,10 @@ text-align: center;
     letter-spacing: -1px;
   }
 
-  .blocos {
-    flex-direction: column; /* Um embaixo do outro */
-    gap: 40px;
-    padding: 20px 20px;
-    max-width: 100%;
-    
-  }
-
-  .bloco-direita {
-    width: 100%;
-    padding: 20px;
-  
-    flex-direction: column;
-  }
-
+  .bloco-direita,
   .bloco-esquerdo {
     width: 100%;
     padding: 20px;
-    flex-direction: column;
-    align-self: flex-start; /* Alinha à esquerda */
-  }
-
-  .boxrodape {
-    flex-direction: column;
-    height: auto;
-    gap: 20px;
   }
 
   .rodape h2 {
@@ -276,8 +301,7 @@ text-align: center;
   }
 
   .lista ul {
-    flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
   }
 }
-
