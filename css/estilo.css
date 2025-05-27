@@ -85,7 +85,7 @@ header .texto a {
 }
 
 header .texto a:hover {
-  background-color: var(--color-secondary);
+  background-color: var(--color-azul);
 }
 
 /* SECTIONS */
@@ -213,9 +213,13 @@ color: var(--color-dark);
 }
 
 .botao-portfolio:hover {
-  background-color: var(--color-secondary);
+  background-color: var(--color-azul);
 }
 
+.rodape a:hover{
+  background-color: var(--color-azul);
+  color: var(--color-light);
+}
 /* REDES SOCIAIS */
 .lista {
   display: flex;
@@ -224,7 +228,13 @@ color: var(--color-dark);
   margin-top: 50px;
   flex-wrap: wrap;
 }
-
+.rodape a{
+  font-size: 24px;
+  gap: 30px;
+  color: var(--color-light);
+  text-decoration: none;
+  margin-bottom: 10px;
+}
 .lista div {
   text-align: center;
   transition: transform 0.3s ease;
@@ -242,17 +252,17 @@ color: var(--color-dark);
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   cursor: pointer;
   object-fit: cover;
-}
+ }
 
 .lista div:hover img {
   filter: brightness(0.7) sepia(1) hue-rotate(180deg);
 }
 
-.lista a.linkedin {
+.lista a.rede-social {
   display: block;
   margin-top: 10px;
   background-color: var(--color-primary);
-  color: white;
+  color: var(--color-light);
   padding: 4px 8px;
   border-radius: 24px;
   text-decoration: none;
@@ -260,8 +270,8 @@ color: var(--color-dark);
   transition: background-color 0.3s;
 }
 
-.lista a.linkedin:hover {
-  background-color: #023e8a;
+.lista a.rede-social:hover {
+  background-color: var(--color-azul);
 }
 
 /* FOOTER */
